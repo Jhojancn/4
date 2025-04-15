@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,7 @@ namespace Semana4
     {
         static void Main(string[] args)
         {
-           
+
             Ej4();
             Ej5();
             Ej6();
@@ -27,7 +27,7 @@ namespace Semana4
             if (a < b)
             {
                 Console.WriteLine("Intercambio");
-                    int aux = a; a = b; b = aux;
+                int aux = a; a = b; b = aux;
                 Console.WriteLine($"a={a} \nb={b}");
             }
             else
@@ -42,7 +42,8 @@ namespace Semana4
             Console.WriteLine("\nEjercicio 2");
             Console.Write("Elija una opción \n (1)s \n (2)c \n (3)v \n (4)d:");
             int opcion = int.Parse(Console.ReadLine());
-            switch (opcion) {
+            switch (opcion)
+            {
                 case 1: Console.WriteLine("Soltero"); break;
                 case 2: Console.WriteLine("Casado"); break;
                 case 3: Console.WriteLine("Viudo"); break;
@@ -54,16 +55,16 @@ namespace Semana4
         {
             /*Encuentre el mayor valor de tres números dados*/
             Console.WriteLine("\nEjercicio3");
-            Random num= new Random();
+            Random num = new Random();
             int n1 = num.Next(21);
             int n2 = num.Next(21);
             int n3 = num.Next(21);
             Console.WriteLine($"n1={n1} \nn2={n2}\nn3={n3}");
             int max = n1;
-            if (n2> max) max = n2;
+            if (n2 > max) max = n2;
             if (n3 > max) max = n3;
             Console.WriteLine($"Mayor={max}");
-           
+
         }
         static void Ej4()
         {/*Ordene de mayor a menor tres números ingresados por teclado.*/
@@ -72,18 +73,19 @@ namespace Semana4
             Console.Write("Segundo número="); int n2 = int.Parse(Console.ReadLine());
             Console.Write("Tercer número="); int n3 = int.Parse(Console.ReadLine());
             int max = n1;
+            int min = n3;
             if (n2 > max) max = n2;
-            if (n3 > max) max = n3; int medio = n1 + n2 + n3 - max;
-            Console.WriteLine($"Mayor={max}, {medio}, {n1}");
-            int min = n1;
-            if (
-                if (n2 < min) min = n2;
-                if (n3 < min) min = n3; medio = n1 + n2 + n3 - min;
-                Console.WriteLine($"Mayor={1}, {medio}, {min}")); 
+            if (n3 > max) max = n3;     
+            if (n2 < min) min = n2;
+            if (n1 < min) min = n1;
+            int suma= n1 + n2 + n3;
+            int suma_2 = max + min;
+            int medio = suma-suma_2;
+            Console.WriteLine($"Mayor={max}, {medio}, {min}");
 
 
         }
-     
+
         static void Ej5()
         {
             /*Elabore un algoritmo que resuelva las raíces reales cuadráticas*/
@@ -92,8 +94,8 @@ namespace Semana4
             int b = num.Next(21);
             int c = num.Next(21);
             Console.WriteLine($"La ecuación es la siguiente{a}x2 + {b}x + {c}");
-            double d = Math.Pow(b,2)-4*a*c;
-            double r1 = (b - Math.Sqrt(d))/2*a;
+            double d = Math.Pow(b, 2) - 4 * a * c;
+            double r1 = (b - Math.Sqrt(d)) / 2 * a;
             double r2 = (b + Math.Sqrt(d)) / 2 * a;
             if (d > 0) Console.WriteLine($"Raíz 1= {r1}, Raíz 2={r2}");
             else Console.WriteLine("No existe esa raíz");
@@ -125,7 +127,7 @@ mes al que representa e indicar el número de días de éste.*/
 
         }
 
-    
+
 
 
     }
